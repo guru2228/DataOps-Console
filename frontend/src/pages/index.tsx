@@ -132,7 +132,7 @@ export default function WebSite() {
         <FeaturesSection
           projectName={'DataOps Console'}
           image={['Data management tools overview']}
-          withBg={0}
+          withBg={1}
           features={features_points}
           mainText={`Discover Key Features of ${projectName}`}
           subTitle={`Enhance your DataOps efficiency with ${projectName}. Explore our powerful features designed to streamline data management and integration processes.`}

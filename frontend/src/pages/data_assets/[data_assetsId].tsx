@@ -112,6 +112,7 @@ const EditData_assets = () => {
                   options={initialValues.owner}
                   itemRef={'users'}
                   showField={'firstName'}
+                  showField={'id'}
                 ></Field>
               </FormField>
 

@@ -182,6 +182,39 @@ const UsersView = () => {
             </CardBox>
           </>
 
+          <>
+            <p className={'block font-bold mb-2'}>Cli_org_admins user_id</p>
+            <CardBox
+              className='mb-6 border border-gray-300 rounded overflow-hidden'
+              hasTable
+            >
+              <div className='overflow-x-auto'>
+                <table>
+                  <thead>
+                    <tr></tr>
+                  </thead>
+                  <tbody>
+                    {users.cli_org_admins_user_id &&
+                      Array.isArray(users.cli_org_admins_user_id) &&
+                      users.cli_org_admins_user_id.map((item: any) => (
+                        <tr
+                          key={item.id}
+                          onClick={() =>
+                            router.push(
+                              `/cli_org_admins/cli_org_admins-view/?id=${item.id}`,
+                            )
+                          }
+                        ></tr>
+                      ))}
+                  </tbody>
+                </table>
+              </div>
+              {!users?.cli_org_admins_user_id?.length && (
+                <div className={'text-center py-4'}>No data</div>
+              )}
+            </CardBox>
+          </>
+
           <BaseDivider />
 
           <BaseButton

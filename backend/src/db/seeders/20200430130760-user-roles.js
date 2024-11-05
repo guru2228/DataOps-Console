@@ -118,6 +118,26 @@ module.exports = {
       'roles',
       'permissions',
       'client_orgs',
+      'users',
+      'cli_org',
+      'cli_org_admins',
+      'cli_org_entity_info',
+      'cli_org_grp',
+      'connection_spec',
+      'contact_info',
+      'data_asset_entity_map',
+      'data_asset_info',
+      'data_asset_type',
+      'data_extract_dag',
+      'data_extract_request',
+      'data_extract_template',
+      'entity_info',
+      'integration_spec',
+      'payload_field_spec',
+      'payload_layout_spec',
+      'payload_record_spec',
+      'pipeline_spec',
+      'pipeline_step',
       ,
     ];
     await queryInterface.bulkInsert(
@@ -715,6 +735,83 @@ primary key ("roles_permissionsId", "permissionId")
         createdAt,
         updatedAt,
         roles_permissionsId: getId('DataOpsDirector'),
+        permissionId: getId('CREATE_USERS'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('DataOpsDirector'),
+        permissionId: getId('READ_USERS'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('DataOpsDirector'),
+        permissionId: getId('UPDATE_USERS'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('DataOpsDirector'),
+        permissionId: getId('DELETE_USERS'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('IntegrationLead'),
+        permissionId: getId('CREATE_USERS'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('IntegrationLead'),
+        permissionId: getId('READ_USERS'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('QualityAssuranceSpecialist'),
+        permissionId: getId('CREATE_USERS'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('QualityAssuranceSpecialist'),
+        permissionId: getId('READ_USERS'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('ClientOperationsManager'),
+        permissionId: getId('CREATE_USERS'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('ClientOperationsManager'),
+        permissionId: getId('READ_USERS'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('DataVendorAnalyst'),
+        permissionId: getId('CREATE_USERS'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('DataOpsDirector'),
         permissionId: getId('CREATE_SEARCH'),
       },
 
@@ -894,6 +991,506 @@ primary key ("roles_permissionsId", "permissionId")
         updatedAt,
         roles_permissionsId: getId('Administrator'),
         permissionId: getId('DELETE_PIPELINES'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('CREATE_USERS'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('READ_USERS'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('UPDATE_USERS'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('DELETE_USERS'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('CREATE_CLI_ORG'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('READ_CLI_ORG'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('UPDATE_CLI_ORG'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('DELETE_CLI_ORG'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('CREATE_CLI_ORG_ADMINS'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('READ_CLI_ORG_ADMINS'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('UPDATE_CLI_ORG_ADMINS'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('DELETE_CLI_ORG_ADMINS'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('CREATE_CLI_ORG_ENTITY_INFO'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('READ_CLI_ORG_ENTITY_INFO'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('UPDATE_CLI_ORG_ENTITY_INFO'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('DELETE_CLI_ORG_ENTITY_INFO'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('CREATE_CLI_ORG_GRP'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('READ_CLI_ORG_GRP'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('UPDATE_CLI_ORG_GRP'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('DELETE_CLI_ORG_GRP'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('CREATE_CONNECTION_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('READ_CONNECTION_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('UPDATE_CONNECTION_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('DELETE_CONNECTION_SPEC'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('CREATE_CONTACT_INFO'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('READ_CONTACT_INFO'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('UPDATE_CONTACT_INFO'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('DELETE_CONTACT_INFO'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('CREATE_DATA_ASSET_ENTITY_MAP'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('READ_DATA_ASSET_ENTITY_MAP'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('UPDATE_DATA_ASSET_ENTITY_MAP'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('DELETE_DATA_ASSET_ENTITY_MAP'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('CREATE_DATA_ASSET_INFO'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('READ_DATA_ASSET_INFO'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('UPDATE_DATA_ASSET_INFO'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('DELETE_DATA_ASSET_INFO'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('CREATE_DATA_ASSET_TYPE'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('READ_DATA_ASSET_TYPE'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('UPDATE_DATA_ASSET_TYPE'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('DELETE_DATA_ASSET_TYPE'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('CREATE_DATA_EXTRACT_DAG'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('READ_DATA_EXTRACT_DAG'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('UPDATE_DATA_EXTRACT_DAG'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('DELETE_DATA_EXTRACT_DAG'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('CREATE_DATA_EXTRACT_REQUEST'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('READ_DATA_EXTRACT_REQUEST'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('UPDATE_DATA_EXTRACT_REQUEST'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('DELETE_DATA_EXTRACT_REQUEST'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('CREATE_DATA_EXTRACT_TEMPLATE'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('READ_DATA_EXTRACT_TEMPLATE'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('UPDATE_DATA_EXTRACT_TEMPLATE'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('DELETE_DATA_EXTRACT_TEMPLATE'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('CREATE_ENTITY_INFO'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('READ_ENTITY_INFO'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('UPDATE_ENTITY_INFO'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('DELETE_ENTITY_INFO'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('CREATE_INTEGRATION_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('READ_INTEGRATION_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('UPDATE_INTEGRATION_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('DELETE_INTEGRATION_SPEC'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('CREATE_PAYLOAD_FIELD_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('READ_PAYLOAD_FIELD_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('UPDATE_PAYLOAD_FIELD_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('DELETE_PAYLOAD_FIELD_SPEC'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('CREATE_PAYLOAD_LAYOUT_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('READ_PAYLOAD_LAYOUT_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('UPDATE_PAYLOAD_LAYOUT_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('DELETE_PAYLOAD_LAYOUT_SPEC'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('CREATE_PAYLOAD_RECORD_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('READ_PAYLOAD_RECORD_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('UPDATE_PAYLOAD_RECORD_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('DELETE_PAYLOAD_RECORD_SPEC'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('CREATE_PIPELINE_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('READ_PIPELINE_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('UPDATE_PIPELINE_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('DELETE_PIPELINE_SPEC'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('CREATE_PIPELINE_STEP'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('READ_PIPELINE_STEP'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('UPDATE_PIPELINE_STEP'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('Administrator'),
+        permissionId: getId('DELETE_PIPELINE_STEP'),
       },
 
       {
@@ -1119,6 +1716,506 @@ primary key ("roles_permissionsId", "permissionId")
         updatedAt,
         roles_permissionsId: getId('SuperAdmin'),
         permissionId: getId('DELETE_CLIENT_ORGS'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('CREATE_USERS'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('READ_USERS'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('UPDATE_USERS'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('DELETE_USERS'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('CREATE_CLI_ORG'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('READ_CLI_ORG'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('UPDATE_CLI_ORG'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('DELETE_CLI_ORG'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('CREATE_CLI_ORG_ADMINS'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('READ_CLI_ORG_ADMINS'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('UPDATE_CLI_ORG_ADMINS'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('DELETE_CLI_ORG_ADMINS'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('CREATE_CLI_ORG_ENTITY_INFO'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('READ_CLI_ORG_ENTITY_INFO'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('UPDATE_CLI_ORG_ENTITY_INFO'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('DELETE_CLI_ORG_ENTITY_INFO'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('CREATE_CLI_ORG_GRP'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('READ_CLI_ORG_GRP'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('UPDATE_CLI_ORG_GRP'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('DELETE_CLI_ORG_GRP'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('CREATE_CONNECTION_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('READ_CONNECTION_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('UPDATE_CONNECTION_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('DELETE_CONNECTION_SPEC'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('CREATE_CONTACT_INFO'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('READ_CONTACT_INFO'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('UPDATE_CONTACT_INFO'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('DELETE_CONTACT_INFO'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('CREATE_DATA_ASSET_ENTITY_MAP'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('READ_DATA_ASSET_ENTITY_MAP'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('UPDATE_DATA_ASSET_ENTITY_MAP'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('DELETE_DATA_ASSET_ENTITY_MAP'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('CREATE_DATA_ASSET_INFO'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('READ_DATA_ASSET_INFO'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('UPDATE_DATA_ASSET_INFO'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('DELETE_DATA_ASSET_INFO'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('CREATE_DATA_ASSET_TYPE'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('READ_DATA_ASSET_TYPE'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('UPDATE_DATA_ASSET_TYPE'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('DELETE_DATA_ASSET_TYPE'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('CREATE_DATA_EXTRACT_DAG'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('READ_DATA_EXTRACT_DAG'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('UPDATE_DATA_EXTRACT_DAG'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('DELETE_DATA_EXTRACT_DAG'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('CREATE_DATA_EXTRACT_REQUEST'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('READ_DATA_EXTRACT_REQUEST'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('UPDATE_DATA_EXTRACT_REQUEST'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('DELETE_DATA_EXTRACT_REQUEST'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('CREATE_DATA_EXTRACT_TEMPLATE'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('READ_DATA_EXTRACT_TEMPLATE'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('UPDATE_DATA_EXTRACT_TEMPLATE'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('DELETE_DATA_EXTRACT_TEMPLATE'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('CREATE_ENTITY_INFO'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('READ_ENTITY_INFO'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('UPDATE_ENTITY_INFO'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('DELETE_ENTITY_INFO'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('CREATE_INTEGRATION_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('READ_INTEGRATION_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('UPDATE_INTEGRATION_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('DELETE_INTEGRATION_SPEC'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('CREATE_PAYLOAD_FIELD_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('READ_PAYLOAD_FIELD_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('UPDATE_PAYLOAD_FIELD_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('DELETE_PAYLOAD_FIELD_SPEC'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('CREATE_PAYLOAD_LAYOUT_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('READ_PAYLOAD_LAYOUT_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('UPDATE_PAYLOAD_LAYOUT_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('DELETE_PAYLOAD_LAYOUT_SPEC'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('CREATE_PAYLOAD_RECORD_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('READ_PAYLOAD_RECORD_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('UPDATE_PAYLOAD_RECORD_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('DELETE_PAYLOAD_RECORD_SPEC'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('CREATE_PIPELINE_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('READ_PIPELINE_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('UPDATE_PIPELINE_SPEC'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('DELETE_PIPELINE_SPEC'),
+      },
+
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('CREATE_PIPELINE_STEP'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('READ_PIPELINE_STEP'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('UPDATE_PIPELINE_STEP'),
+      },
+      {
+        createdAt,
+        updatedAt,
+        roles_permissionsId: getId('SuperAdmin'),
+        permissionId: getId('DELETE_PIPELINE_STEP'),
       },
 
       {

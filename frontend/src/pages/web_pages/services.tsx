@@ -139,7 +139,7 @@ export default function WebSite() {
         <FeaturesSection
           projectName={'DataOps Console'}
           image={['Data integration tools display']}
-          withBg={1}
+          withBg={0}
           features={features_points}
           mainText={`Explore ${projectName} Service Features`}
           subTitle={`Our platform offers a suite of features to enhance your DataOps capabilities. Discover how ${projectName} can transform your data management and integration processes.`}

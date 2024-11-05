@@ -101,6 +101,14 @@ module.exports = function (sequelize, DataTypes) {
       constraints: false,
     });
 
+    db.users.hasMany(db.cli_org_admins, {
+      as: 'cli_org_admins_user_id',
+      foreignKey: {
+        name: 'user_idId',
+      },
+      constraints: false,
+    });
+
     //end loop
 
     db.users.belongsTo(db.roles, {

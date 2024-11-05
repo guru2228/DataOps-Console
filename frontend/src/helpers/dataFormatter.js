@@ -171,4 +171,118 @@ export default {
     if (!val) return '';
     return { label: val.name, id: val.id };
   },
+
+  usersManyListFormatter(val) {
+    if (!val || !val.length) return [];
+    return val.map((item) => item.id);
+  },
+  usersOneListFormatter(val) {
+    if (!val) return '';
+    return val.id;
+  },
+  usersManyListFormatterEdit(val) {
+    if (!val || !val.length) return [];
+    return val.map((item) => {
+      return { id: item.id, label: item.id };
+    });
+  },
+  usersOneListFormatterEdit(val) {
+    if (!val) return '';
+    return { label: val.id, id: val.id };
+  },
+
+  cli_orgManyListFormatter(val) {
+    if (!val || !val.length) return [];
+    return val.map((item) => item.id);
+  },
+  cli_orgOneListFormatter(val) {
+    if (!val) return '';
+    return val.id;
+  },
+  cli_orgManyListFormatterEdit(val) {
+    if (!val || !val.length) return [];
+    return val.map((item) => {
+      return { id: item.id, label: item.id };
+    });
+  },
+  cli_orgOneListFormatterEdit(val) {
+    if (!val) return '';
+    return { label: val.id, id: val.id };
+  },
+
+  data_asset_infoManyListFormatter(val) {
+    if (!val || !val.length) return [];
+    return val.map((item) => item.id);
+  },
+  data_asset_infoOneListFormatter(val) {
+    if (!val) return '';
+    return val.id;
+  },
+  data_asset_infoManyListFormatterEdit(val) {
+    if (!val || !val.length) return [];
+    return val.map((item) => {
+      return { id: item.id, label: item.id };
+    });
+  },
+  data_asset_infoOneListFormatterEdit(val) {
+    if (!val) return '';
+    return { label: val.id, id: val.id };
+  },
+
+  data_extract_dagManyListFormatter(val) {
+    if (!val || !val.length) return [];
+    return val.map((item) => item.id);
+  },
+  data_extract_dagOneListFormatter(val) {
+    if (!val) return '';
+    return val.id;
+  },
+  data_extract_dagManyListFormatterEdit(val) {
+    if (!val || !val.length) return [];
+    return val.map((item) => {
+      return { id: item.id, label: item.id };
+    });
+  },
+  data_extract_dagOneListFormatterEdit(val) {
+    if (!val) return '';
+    return { label: val.id, id: val.id };
+  },
+
+  data_extract_templateManyListFormatter(val) {
+    if (!val || !val.length) return [];
+    return val.map((item) => item.id);
+  },
+  data_extract_templateOneListFormatter(val) {
+    if (!val) return '';
+    return val.id;
+  },
+  data_extract_templateManyListFormatterEdit(val) {
+    if (!val || !val.length) return [];
+    return val.map((item) => {
+      return { id: item.id, label: item.id };
+    });
+  },
+  data_extract_templateOneListFormatterEdit(val) {
+    if (!val) return '';
+    return { label: val.id, id: val.id };
+  },
+
+  entity_infoManyListFormatter(val) {
+    if (!val || !val.length) return [];
+    return val.map((item) => item.id);
+  },
+  entity_infoOneListFormatter(val) {
+    if (!val) return '';
+    return val.id;
+  },
+  entity_infoManyListFormatterEdit(val) {
+    if (!val || !val.length) return [];
+    return val.map((item) => {
+      return { id: item.id, label: item.id };
+    });
+  },
+  entity_infoOneListFormatterEdit(val) {
+    if (!val) return '';
+    return { label: val.id, id: val.id };
+  },
 };

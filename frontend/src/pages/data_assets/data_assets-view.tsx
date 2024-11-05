@@ -64,6 +64,8 @@ const Data_assetsView = () => {
             <p className={'block font-bold mb-2'}>Owner</p>
 
             <p>{data_assets?.owner?.firstName ?? 'No data'}</p>
+
+            <p>{data_assets?.owner?.id ?? 'No data'}</p>
           </div>
 
           <div className={'mb-4'}>

@@ -54,8 +54,46 @@ module.exports = class SearchService {
         pipelines: ['pipeline_spec'],
 
         client_orgs: ['name'],
+
+        users: ['firstName', 'lastName', 'phoneNumber', 'email', 'user_id'],
+
+        cli_org: ['cli_org_id'],
+
+        contact_info: ['type', 'role', 'val', 'modified_by'],
+
+        data_asset_entity_map: ['modified_by'],
+
+        data_asset_info: ['aide'],
+
+        data_asset_type: ['type', 'modified_by'],
+
+        data_extract_dag: ['dag_pipeline', 'modified_by'],
+
+        data_extract_request: ['form_values', 'modified_by'],
+
+        data_extract_template: [
+          'asset_aide',
+
+          'entity_aide',
+
+          'form_template',
+
+          'modified_by',
+        ],
+
+        entity_info: ['aide'],
       };
-      const columnsInt = {};
+      const columnsInt = {
+        data_extract_dag: ['integratio_spec_id'],
+
+        data_extract_template: ['form_template_id'],
+
+        payload_field_spec: ['payload_field_spec_id'],
+
+        payload_layout_spec: ['payload_layout_spec_id'],
+
+        payload_record_spec: ['payload_record_spec_id'],
+      };
 
       let allFoundRecords = [];
 

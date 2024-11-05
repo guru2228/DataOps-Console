@@ -256,6 +256,10 @@ module.exports = class UsersDBApi {
       transaction,
     });
 
+    output.cli_org_admins_user_id = await users.getCli_org_admins_user_id({
+      transaction,
+    });
+
     output.avatar = await users.getAvatar({
       transaction,
     });
